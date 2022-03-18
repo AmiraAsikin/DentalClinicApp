@@ -1,0 +1,79 @@
+<ion-app>
+  <ion-menu content-id="main" menuId="main-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title class="ion-text-center">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+
+        <ion-menu-toggle>
+          <ion-item [routerLink]= "['/profile']" color="primary">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>My Profile</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item [routerLink]= "['/home']">
+          <ion-icon name="home-outline" slot="start"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/booking']">
+          <ion-icon name="bookmark-outline" slot="start"></ion-icon>
+          <ion-label>Book Appointment</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/treatment']">
+          <ion-icon name="medkit-outline" slot="start"></ion-icon>
+          <ion-label>Treatment</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/teams']" >
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Our Teams</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/review']" >
+          <ion-icon name="thumbs-up-outline" slot="start"></ion-icon>
+          <ion-label>Review</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/about']" >
+          <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+          <ion-label>About Us</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/contact']" >
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-label>Contact Us</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item [routerLink]= "['/welcome']" >
+          <ion-icon name="log-out-outline" slot="start"></ion-icon>
+          <ion-label>Sign Out</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

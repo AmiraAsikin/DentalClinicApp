@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Contact Us</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-content class="ion-text-center">
+
+        <img src="assets/DentalLogo.jpeg" width="150%">
+
+        <b>OPEN HOURS</b>
+        <ion-card color="primary">
+          MONDAY <br> 8:00 AM - 5:00 PM
+        </ion-card>
+        <ion-card color="primary">
+          TUESDAY <br> 8:00 AM- 5:00 PM
+        </ion-card>
+        <ion-card color="primary">
+          WEDNESDAY <br> 8:00 AM - 5:00 PM
+        </ion-card>
+        <ion-card color="primary">
+          THURSDAY <br> 8:00 AM - 5:00 PM
+        </ion-card>
+        <ion-card color="primary" >
+          FRIDAY <br> 8:00 AM - 5:00 PM
+        </ion-card>
+        
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="ion-text-center">
+      <b>CLINIC ADDRESS</b>
+       <br>
+        <p> No 3 Jalan Sulong <br>
+          Emas 1 Parit Sulong 83500 <br>
+          Batu Pahat Johor </p>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content class="ion-text-center">
+        <b> CALL OR WHATSAPP </b>
+        <ion-button expand="block" color="danger">
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <p> +60106642936</p>
+        </ion-button>
+        <ion-button expand="block" color="danger">
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <p> 074163668</p>
+        </ion-button>
+        <br>
+        <b>EMAIL US</b>
+        <ion-button expand="block" color="warning" >
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <h5> AmiraDentalClinic <br>
+            @gmail.com</h5>
+        </ion-button>
+     
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="success">
+      <div class="ion-padding">
+    <ion-text class="ion-text-center">
+      <p>PLEASE FILL UP ENQUIRY AND WE WILL BE IN TOUCH WITH YOU SOON</p>
+    </ion-text>
+
+    <br>
+
+    <div class="form">
+      <ion-item lines="none">
+        <ion-input type="text" [(ngModel)]="post.name" placeholder="Name" required></ion-input>
+      </ion-item>
+
+
+      <ion-item lines="none">
+        <ion-input type="email" placeholder="your@gmail.com" [(ngModel)]="post.email" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Enquire Type</ion-label>
+        <ion-select value="General" okText="Okay" [(ngModel)]="post.enquiry" cancelText="Dismiss">
+          <ion-select-option value="General">General</ion-select-option>
+          <ion-select-option value="Review">Review</ion-select-option>
+          <ion-select-option value="Complaint">Complaint</ion-select-option>
+          <ion-select-option value="Others">Others</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Message" [(ngModel)]="post.message"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" (click)="createPost(post)">
+        <ion-icon slot="start" name="send"></ion-icon>
+        Send
+      </ion-button>
+    
+    </div>
+    </div>
+  </ion-card>
+  <br><br>
+ 
+
+</ion-content>

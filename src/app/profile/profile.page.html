@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">My Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <h1 class="ion-text-center">Hello Dear !</h1> -->
+  <div class="banner">
+    <p class="ion-text-center">
+      <img src="assets/ProfileIcon.png" width="80%">
+   </p>
+  </div>
+
+  <h1 class="ion-text-center">Hello Dear !</h1>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/view-book']" expand="block" color="success">
+          My Appointment
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button [routerLink]="['/view-post']" expand="block" color="success"  >
+        My Feedback
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<P class="ion-text-center">
+  Have any requires ? 
+  Let us know you <br>
+  Thank you ! <br>
+
+  <ion-button fill="clear" [routerLink]="['/contact']">
+    Contact Us Now 
+  </ion-button>
+</P>
+
+</ion-content>

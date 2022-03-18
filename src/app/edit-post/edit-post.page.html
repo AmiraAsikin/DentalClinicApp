@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <ion-title>Edit Post</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-padding">
+<ion-text color="danger" class="ion-text-center">
+  <p>Update Information</p>
+</ion-text>
+
+<br>
+<div class="form">
+<ion-item lines="none">
+  <ion-input type="text"  [(ngModel)]="post.name" required></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <!-- <ion-label position="floating">E-Mail</ion-label> -->
+  <ion-input type="email" [(ngModel)]="post.email" placeholder="your@gmail.com" required></ion-input>
+</ion-item>
+
+  <ion-item lines="none" >
+    <ion-label>Enquiry Type</ion-label>
+    <ion-select [(ngModel)]="post.enquiry" value="General" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="General">General</ion-select-option>
+      <ion-select-option value="Complaint">Review</ion-select-option>
+      <ion-select-option value="Others">Others</ion-select-option>
+    </ion-select>
+    </ion-item>
+
+   <ion-item lines="none">
+     <!-- <ion-label position="floating">Message</ion-label> -->
+     <ion-textarea [(ngModel)]="post.message" placeholder="type your message"></ion-textarea>
+   </ion-item>
+    
+   <ion-button expand="block" color="primary" (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>
+    Update
+   </ion-button>
+
+  </div>
+  </div>
+
+</ion-content>
+
+<!-- <ion-footer>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Copyright</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+

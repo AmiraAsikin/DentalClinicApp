@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <ion-title>Edit Book</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-text color="danger" class="ion-text-center">
+      <p>Update Appointment</p>
+    </ion-text>
+
+<div class="form">
+<ion-item lines="none">
+  <ion-input type="text"  [(ngModel)]="book.name" placeholder="Name" required></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-input type="email" [(ngModel)]="book.email" placeholder="your@gmail.com" required></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-input type="phone" [(ngModel)]="book.phone" placeholder="0123456789" required></ion-input>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-label>Treatment Type</ion-label>
+  <ion-select value="General" [(ngModel)]="book.treatment" okText="Okay" cancelText="Dismiss">
+    <ion-select-option value="Crown">Crown</ion-select-option>
+    <ion-select-option value="Teeth Whitening">Teeth Whitening</ion-select-option>
+    <ion-select-option value="Braces">Braces</ion-select-option>
+    <ion-select-option value="Denture">Denture</ion-select-option>
+    <ion-select-option value="Teeth Extraction">Teeth Extraction</ion-select-option>
+    <ion-select-option value="Scaling&Polishing">Scaling & Polishing</ion-select-option>
+    <ion-select-option value="Fillings">Fillings</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item lines="none">
+  <ion-input type="date" placeholder="Choose Date" [(ngModel)]="book.date" required></ion-input>
+</ion-item>
+
+<!-- <ion-item lines="none">
+  <ion-datetime presentation="time" placeholder="Choose Time" [(ngModel)]="book.time" required></ion-datetime>
+</ion-item> -->
+
+<ion-item lines="none">
+  <ion-input type="time" placeholder="Choose Time" [(ngModel)]="book.time" required></ion-input>
+</ion-item>
+    
+   <ion-button expand="block" color="primary" (click)="updateBook(book)">
+     <ion-icon slot="start" name="send"></ion-icon>
+    Update
+   </ion-button>
+
+  </div>
+  </div>
+
+</ion-content>

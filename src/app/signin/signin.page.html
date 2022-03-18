@@ -1,0 +1,40 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <br><br>
+    <div class="banner">
+      <p class="ion-text-center">
+        <img src="assets/DentalLogo.jpeg" width="95%">
+      </p>
+    </div>
+
+    <div class="form">
+    <ion-item lines="none">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="email" [(ngModel)]="user.email"  placeholder="Email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input type="password" [(ngModel)]="user.password" placeholder="Password" required></ion-input>
+    </ion-item>
+
+    <ion-button class="ion-padding" expand="block" color="primary" (click)="signin(user)">
+      SIGN IN
+    </ion-button>
+  
+  </div>
+
+  <P class="ion-text-center">
+    Don't have an account?
+    <ion-button fill="clear" [routerLink]="['/signup']">
+      Sign Up
+    </ion-button>
+  </P>
+
+
+  </div>
+</ion-content>

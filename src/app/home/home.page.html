@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <div class="banner">
+      <p class="ion-text-center">
+        <img src="assets/DentalLogo.jpeg" width="80%">
+      </p>
+    </div>
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <ion-button [routerLink]="['/booking']" expand="block" color="success">
+            Book An Appointment
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <video src="assets/DentalPromo.mp4" width="100%" controls="controls" preload="metadata" 
+      webkit-playsinline="webkit-playsinline" class="videoPlayer"></video>
+
+    <div class="banner">
+      <p class="ion-text-center">
+        <img src="assets/Banner.jpg" width="100%">
+      </p>
+    </div>
+    <br>
+
+    <!-- <video src="assets/DentalVideo.mp4" width="100%"
+  controls="controls"
+  preload="metadata"
+  autoplay="autoplay"
+  webkit-playsinline="webkit-playsinline"
+  class="videoPlayer"></video> -->
+
+    <h3 class="ion-text-center"> <b>OUR GALLERY</b> </h3>
+    <p class="ion-text-center">Let See Our Memories and View Our Clinic Environment</p>
+
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="assets/Gallery1.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery2.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery3.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery4.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery5.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery6.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery7.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery8.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery9.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/Gallery10.jpg">
+      </ion-slide>
+    </ion-slides>
+    <br>
+    <h3 class="ion-text-center"> <b>OUR BEST DENTIST</b> </h3>
+    <p class="ion-text-center">Get Your Treat With Our Best Dentist</p>
+    <div class="banner">
+      <p class="ion-text-center">
+        <img src="assets/DoctorAmira.jpg" width="100%">
+      </p>
+    </div>
+    <div class="banner">
+      <p class="ion-text-center">
+        <img src="assets/DoctorFarra.jpg" width="100%">
+      </p>
+    </div>
+    <br>
+  </div>
+
+</ion-content>
